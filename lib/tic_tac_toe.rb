@@ -128,18 +128,8 @@ class TicTacToe
     if draw?
         puts "Cat's Game!"
     elsif won?
-          
-          WIN_COMBINATIONS.each do |array|
-            x = array.all?{|index| @board[index] == "X"}
-            o = array.all?{|index| @board[index] == "O"}
-            if x == true 
-              puts "Congratulations, X!"
-            elsif o == true
-              puts "Congratulations, O!"
-            end
-          end
-          
-     end
+        puts "Congratulations, #{winner}!"
+    end
          
   end
     

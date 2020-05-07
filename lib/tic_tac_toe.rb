@@ -66,7 +66,7 @@ class TicTacToe
   end
   
   def won?
-    winning_combo = []
+     winning_combo = []
       WIN_COMBINATIONS.each do |array|
             x = array.all?{|index| @board[index] == "X"}
             o = array.all?{|index| @board[index] == "O"}
@@ -77,8 +77,7 @@ class TicTacToe
     if winning_combo.empty?
       return false
     else
-      return winning_combo
-    end
+      return
   end
   
   def full?

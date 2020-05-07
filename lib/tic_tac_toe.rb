@@ -122,14 +122,12 @@ class TicTacToe
     end
 
   def play
-    turn
-    over?
-      if false
-        play
-      else
-        if draw?
-          puts "Cat's Game!"
-        elsif won?
+    until over?
+     turn
+    end
+    if draw?
+        puts "Cat's Game!"
+    elsif won?
           
           WIN_COMBINATIONS.each do |array|
             x = array.all?{|index| @board[index] == "X"}
@@ -141,9 +139,8 @@ class TicTacToe
             end
           end
           
-         end
+     end
          
-      end
   end
     
     

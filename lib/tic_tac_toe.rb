@@ -123,10 +123,8 @@ class TicTacToe
 
   def play
     turn
-    over?
-      if true
-      draw?
-        if true
+    if over?
+        if draw?
           puts "Cat's Game!"
         else
           WIN_COMBINATIONS.each do |array|

@@ -129,7 +129,7 @@ class TicTacToe
       else
         if draw?
           puts "Cat's Game!"
-        else
+        elsif won?
           
           WIN_COMBINATIONS.each do |array|
             x = array.all?{|index| @board[index] == "X"}

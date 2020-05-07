@@ -77,7 +77,8 @@ class TicTacToe
     if winning_combo.empty?
       return false
     else
-      return
+      return winning_combo
+    end
   end
   
   def full?

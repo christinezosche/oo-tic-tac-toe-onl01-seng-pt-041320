@@ -127,7 +127,7 @@ class TicTacToe
       if true
       draw?
         if true
-        puts "Cat's Game!"
+          puts "Cat's Game!"
         else
           WIN_COMBINATIONS.each do |array|
             x = array.all?{|index| @board[index] == "X"}
@@ -137,6 +137,7 @@ class TicTacToe
             elsif o == true
               puts "Congratulations, O!"
             end
+          end
          end
       else
         play

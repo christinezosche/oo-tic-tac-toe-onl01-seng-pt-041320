@@ -100,20 +100,10 @@ class TicTacToe
   def over?
     if draw? == true
       return true
-    else 
-     winning_combo = []
-      WIN_COMBINATIONS.each do |array|
-            x = array.all?{|index| @board[index] == "X"}
-            o = array.all?{|index| @board[index] == "O"}
-            if x == true || o == true
-              winning_combo = array
-            end
-      end
-      if winning_combo.empty?
-      return false
-      else
+    elsif won? != nil
       return true
-      end
+    else
+      return false
     end
   end
   
